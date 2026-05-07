@@ -13,7 +13,7 @@ if (-not $prLinks -or $prLinks.Count -eq 0) {
 # Step 2: Set working directory
 # ---------------------------------------------------
 
-Set-Location "C:\Users\rahshar\source\repos\ACE-SoftwareRP-Agent\agent\"
+Set-Location "C:\agent\"
 
 # ---------------------------------------------------
 # Step 3: Iterate each PR
@@ -38,7 +38,7 @@ Target Active PR Link:
 $prLink
 "@
 
-    agency copilot -p $prompt `
+    copilot -p $prompt `
       --yolo `
       --experimental `
       --autopilot `
