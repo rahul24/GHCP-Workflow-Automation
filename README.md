@@ -1,4 +1,4 @@
-# Workflow Automation using GHCP with Agentic Workflows
+# Workflow Automation using GHCP
 
 ## Background
 
