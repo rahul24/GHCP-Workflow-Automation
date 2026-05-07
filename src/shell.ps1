@@ -13,7 +13,7 @@ if (-not $prLinks -or $prLinks.Count -eq 0) {
 # Step 2: Set working directory
 # ---------------------------------------------------
 
-Set-Location "C:\Users\rahshar\source\repos\ACE-SoftwareRP-Agent\agent\"
+Set-Location "C:\agent\"
 
 # ---------------------------------------------------
 # Step 3: Iterate each PR
@@ -32,13 +32,13 @@ foreach ($prLink in $prLinks) {
     $logFile = "copilot_$safePrName.log"
 
     $prompt = @"
-Read and follow the instructions provided in the markdown file placed in agent/workflows/PR-Review-Workflow.md.
+Read and follow the instructions provided in the markdown file placed in src/workflows/PR-Review-Workflow.md.
 
 Target Active PR Link:
 $prLink
 "@
 
-    agency copilot -p $prompt `
+    copilot -p $prompt `
       --yolo `
       --experimental `
       --autopilot `
